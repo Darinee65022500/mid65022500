@@ -1,0 +1,52 @@
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class QuizOneJunitTest {
+public QuizOneJunit obj;	
+	@Before
+	public void init() {
+		obj = new QuizOneJunit();
+	}
+@Test
+	public void test02() {
+		assertEquals(1, obj.countLetterA("ACBD"));
+	}	
+	@Test
+	public void test03() {
+		assertEquals(1, obj.countLetterA("aBCD"));
+	}	
+	@Test
+	public void test04() {
+		assertEquals(4, obj.countLetterA("AAAA"));
+	}	
+	@Test
+	public void test05() {
+		assertEquals(2, obj.countLetterA("AABC"));
+	}	
+	@Test
+	public void test06() {
+		assertEquals(0, obj.countLetterA("BBBC"));
+	}
+	@Test
+	public void test07() {
+		assertEquals(0, obj.countLetterA(" "));
+	}	
+	@Test
+	public void test08() {
+		assertEquals(true, obj.checkTwoLetter("AA"));
+	}
+	@Test
+	public void test09() {
+		assertEquals(false, obj.checkTwoLetter("AB"));
+	}
+	@Test
+	public void test10() {
+		assertEquals(true, obj.checkTwoLetter("A"));
+	}
+	@Test
+	public void test11() {
+		assertEquals(4, obj.square(2));
+	}
+}
